@@ -1,3 +1,4 @@
+// stuggled with this so cargo culted
 var model = {
   boardSize: 7,
   numShips: 3,
@@ -13,7 +14,7 @@ var model = {
   fire: function (guess) {
     for (var i = 0; i < this.numShips; i++) {
       var ship = this.ships[i];
-      var index = ship.locations.indexOf(guess); // przesukuje tablice w celu znalezienia guess i zwraca indeks
+      var index = ship.locations.indexOf(guess);
       if (ship.hits[index] === "hit") {
         view.displayMessage("You hit this ship before.");
         return true;
